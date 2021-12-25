@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "stop": "pkill --signal SIGINT myApp"
+    "dev": "nodemon index.js"
   },
   "author": "Egor Zosimov",
   "license": "ISC",
