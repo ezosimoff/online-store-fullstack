@@ -4,9 +4,11 @@ const cors = require('cors')
 const sequelize = require('./DB')
 const models = require('./models/models')
 const app = exporess()
+const router = require('./routes/index')
 
 app.use(cors())
 app.use(exporess.json())
+app.use('/shop', router)
 
 app.get('/', (req, res) => {
     res.status(200).json({massage: 'ответ сервера'})

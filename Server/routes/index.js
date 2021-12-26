@@ -1,10 +1,16 @@
 const Router = require('express')
-const router = new Router()
 
-router.use('/user')
-router.use('/type')
-router.use('/basket')
-router.use('/brand')
-router.use('/item')
+const router = new Router()
+const userRouter = require('./userRouter')
+const itemRouter = require('./itemRouter')
+const typeRouter = require('./typeRouter')
+const brandRouter = require('./brandRouter')
+const basketRouter = require('./basketRouter')
+
+router.use('/basket', basketRouter)
+router.use('/brand', brandRouter)
+router.use('/user', userRouter)
+router.use('/type', typeRouter)
+router.use('/item', itemRouter)
 
 module.exports = router
