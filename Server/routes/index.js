@@ -11,6 +11,6 @@ router.use('/basket', basketRouter)
 router.use('/brand', brandRouter)
 router.use('/user', userRouter)
 router.use('/type', typeRouter)
-router.use('/item', itemRouter)
+router.use('/items', itemRouter)
 
 module.exports = router
