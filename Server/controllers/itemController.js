@@ -46,15 +46,13 @@ class ItemController {
         }
     }
     async getOne(req, res) {
-        const {id} = req.params
-        const item = await Item.findOne({where:{id}})
-
+        const item = await Item.findOne({where:{id: req.params.id}})
         return res.json({item})
     }
     async delete(req, res) {
-        const {id} = req.params
-        const deletedItem = await Item.destroy({where:{id}})
-        return res.json(deletedItem)
+        const deletedItem = await Item.findOne({where:{id: req.params.id}})
+        Item.destroy({where:{id: req.params.id}})
+        return res.json(deletedItem.name)
     }
 
 }
